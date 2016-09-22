@@ -53,3 +53,18 @@ server.on('error', function(err) {
 server.listen(config.port, config.address, () => {
   console.log(`Listening on port ${config.port}`);
 });
+
+let shutdown = () => {
+  console.log("Shutting down...");
+  server.close((err) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    } else {
+      console.log("Done.");
+    }
+  });
+};
+
+process.on('SIGTERM', shutdown);
+process.on('SIGINT', shutdown);
