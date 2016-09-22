@@ -4,13 +4,8 @@
   "version": "0.1.0",
   "license": "CC0-1.0",
   "author": "Evan Prodromou <evan@fuzzy.ai>",
-  "bin": "lib/show-line.js",
   "repository": "fuzzy-ai/show-line",
-  "devDependencies": {
-    "coffee-script": "^1.10.0"
-  },
   "scripts": {
-    "prepublish": "coffee -o lib/ -c src/show-line.coffee",
-    "start": "coffee src/show-line.coffee"
+    "start": "node server.js"
   }
 }
