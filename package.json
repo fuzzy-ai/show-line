@@ -1,7 +1,7 @@
 {
   "name": "show-line",
   "description": "Show a line or two of text",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "CC0-1.0",
   "author": "Evan Prodromou <evan@fuzzy.ai>",
   "repository": "fuzzy-ai/show-line",
