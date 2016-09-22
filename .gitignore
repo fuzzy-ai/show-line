@@ -27,13 +27,4 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Compiled coffee
-lib/*.js
-lib/fuzzy-controller/*.js
-lib/fuzzy-controller/parser/*.js
-
-# Compiled tests
-test/*.js
-
 *~
-
