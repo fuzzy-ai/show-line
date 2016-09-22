@@ -1,8 +1,8 @@
-// show-line.coffee
+// show-line.js
 // Shows a line or two of HTML.
 
-import http from 'http';
-import https from 'https';
+const http = require('http');
+const https = require('https');
 
 let config = {
   address: process.env['ADDRESS'] || "0.0.0.0",
@@ -25,7 +25,7 @@ let body = `<!DOCTYPE html>
   </body>
 </html>`;
 
-let bodyLength = Buffer.byteLength(body);
+const bodyLength = Buffer.byteLength(body);
 
 let handler = function(req, res, next) {
 
@@ -48,8 +48,8 @@ if (config.key != null) {
 server.on('error', function(err) {
   console.error(err);
   return process.exit(1);
-}
-);
+});
 
-server.listen(config.port, config.address, () => console.log(`Listening on port ${config.port}`)
-);
+server.listen(config.port, config.address, () => {
+  console.log(`Listening on port ${config.port}`);
+});
